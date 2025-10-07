@@ -1,0 +1,16 @@
+{# templates/all.txt #}
+Hello {{ name }}
+
+{% if score > 80 %}
+I'm happy to inform that you did very well on today's {{ test_name }}.
+{% else %}
+Your score on today's test {{ test_name }} could have been better. More studying, less vampire hunting!
+{% endif %}
+You achieved {{ score }} out of {{ max_score}} points!
+
+See you tomorrow,
+
+Mrs. Calendar
+
+{% for student in students %}{{ student.name }}, {{ student.score }}, {{ max_score }}
+{% endfor %}
